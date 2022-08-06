@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pizzerias</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="container">
+
+    <div id="menu_bar">
+        <a class="active" href="#">Menu 1</a>
+        <a href="#">Menu 2</a>
+        <a href="#">Menu 3</a>
+    </div>
+
+    <div id="content">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Opening time</th>
+                <th>Closing time</th>
+            </tr>
+            <tr data-th-each="pizzaPlace : ${pizzaPlaces}">
+                <td data-th-text="${pizzaPlace.id}"></td>
+                <td data-th-text="${pizzaPlace.name}"></td>
+                <td data-th-text="${pizzaPlace.address}"></td>
+                <td data-th-text="${pizzaPlace.openingTime}"></td>
+                <td data-th-text="${pizzaPlace.closingTime}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

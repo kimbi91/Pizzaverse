@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pizzas</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="container">
+
+    <div id="menu_bar">
+        <a class="active" href="#">Menu 1</a>
+        <a href="#">Menu 2</a>
+        <a href="#">Menu 3</a>
+    </div>
+
+    <div id="content">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Toppings</th>
+                <th>Pizza Size</th>
+                <th>Pirce</th>
+            </tr>
+            <tr data-th-each="pizza : ${pizzas}">
+                <td data-th-text="${pizza.id}"></td>
+                <td data-th-text="${pizza.name}"></td>
+                <td data-th-text="${pizza.toppings}"></td>
+                <td data-th-text="${pizza.pizzaSize}"></td>
+                <td data-th-text="${pizza.price}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
